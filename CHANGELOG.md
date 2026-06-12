@@ -1,5 +1,12 @@
 ﻿# Changelog
 
+## 0.5.0 - 2026-06-13
+
+- Added machine-readable style specs `skill/sketchnote-creator/styles/{CODE}.yaml` for all 7 styles: exact palette hex, typography, composition, text-density limits, line quality, failure modes. SKILL.md now instructs reading the YAML before writing the final prompt — no more improvised colors.
+- Eval harness extended: verifies every style has a YAML spec with required fields, matching code, and a valid template path.
+- New-style authoring requirements tightened: a style ships only with YAML spec + eval case + examples + golden gallery image (`docs/authoring-new-styles.md`).
+- Structural eval score at release: all checks pass.
+
 ## 0.4.0 - 2026-06-13
 
 - Added runnable eval harness `scripts/run-evals.mjs` (zero-dependency Node): structural checks (case schema, BOM, template assets, reference links, style-code consistency), grading-packet generation for behavioral cases, and results scoring.

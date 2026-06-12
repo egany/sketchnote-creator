@@ -1,20 +1,23 @@
-﻿# Authoring New Styles
+# Authoring New Styles
 
-A new style should include:
+A new style ships only when ALL of these exist:
 
 - Short code, for example `MAP` or `INK`
-- Clear use case
-- Template asset
-- Visual rules
-- Text density guidance
-- Color guidance
-- Example prompt
-- Failure modes to avoid
+- Template asset in `skill/sketchnote-creator/assets/`
+- Machine-readable spec `skill/sketchnote-creator/styles/{CODE}.yaml` with: `code`, `name`, `template`, `use_for`, `palette` (hex values), `typography`, `composition`, `text_density`, `line_quality`, `failure_modes`
+- Entry in `references/style-library.md` (human overview) and the SKILL.md style-selection table
+- Keypoint budget row in `references/content-distillation.md`
+- At least one eval case in `evals/cases/style-selection.json`
+- Example input in `examples/input/` and example prompt in `examples/prompts/`
+- Golden example image in `evals/gallery/` for the release that introduces the style
 
-Update these files when adding a style:
+Checklist of files to touch:
 
 - `skill/sketchnote-creator/SKILL.md`
+- `skill/sketchnote-creator/styles/{CODE}.yaml`
 - `skill/sketchnote-creator/references/style-library.md`
-- `examples/input/`
-- `examples/prompts/`
+- `skill/sketchnote-creator/references/content-distillation.md`
 - `evals/cases/style-selection.json`
+- `examples/input/`, `examples/prompts/`
+
+Run `node scripts/run-evals.mjs` afterward — it verifies the YAML spec, template asset, and style-code consistency automatically.

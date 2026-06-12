@@ -1,5 +1,7 @@
 ﻿# Style Library
 
+Human overview of the seven styles. Machine-readable specs with exact palette hex, typography, composition, density limits, and failure modes live in `styles/{CODE}.yaml` — read the YAML of the selected style before writing the final prompt.
+
 ## ACD - AI Contrast Drama
 
 Template: `assets/ACD-AI-Contrast-Drama-template.jpg`

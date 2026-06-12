@@ -62,7 +62,7 @@ Unless the user opts out or provides their own brand mark, add `#voquoccuong` at
 
 If content fits multiple styles, choose the one that makes the core message easiest to understand in 3 seconds.
 
-For detailed style rules, read `references/style-library.md`.
+For detailed style rules, read `references/style-library.md`. When building the final prompt, read `styles/{CODE}.yaml` for the exact palette hex values, typography, composition, text-density limit, and failure modes of the selected style — use those values verbatim instead of improvising colors.
 
 For cover requests (article/blog/event cover, WEC-class), follow `references/cover-spec.md`: title + subtitle + abstract motifs only, no keypoints on the image.
 

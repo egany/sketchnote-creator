@@ -74,6 +74,20 @@ function checkStructure() {
     new RegExp(`\\b${code}\\b`).test(skillMd) ? ok(code) : fail(`style ${code} missing from SKILL.md`);
   }
 
+  console.log("Machine-readable style specs (styles/{CODE}.yaml):");
+  const requiredYamlFields = ["code:", "name:", "template:", "use_for:", "palette:", "typography:", "composition:", "text_density:", "line_quality:", "failure_modes:"];
+  for (const code of codes) {
+    const specPath = path.join(skillDir, "styles", `${code}.yaml`);
+    if (!fs.existsSync(specPath)) { fail(`styles/${code}.yaml missing`); continue; }
+    const spec = read(specPath);
+    const missing = requiredYamlFields.filter((f) => !spec.includes(f));
+    if (missing.length) { fail(`styles/${code}.yaml missing fields: ${missing.join(" ")}`); continue; }
+    if (!spec.includes(`code: ${code}`)) { fail(`styles/${code}.yaml code field does not match filename`); continue; }
+    const tpl = /template:\s*(\S+)/.exec(spec)?.[1];
+    if (!tpl || !fs.existsSync(path.join(skillDir, tpl))) { fail(`styles/${code}.yaml template path invalid: ${tpl}`); continue; }
+    ok(`styles/${code}.yaml`);
+  }
+
   console.log(failures ? `\n${failures} structural check(s) failed.` : "\nAll structural checks passed.");
   process.exit(failures ? 1 : 0);
 }
