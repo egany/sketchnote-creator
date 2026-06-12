@@ -74,6 +74,13 @@ function checkStructure() {
     new RegExp(`\\b${code}\\b`).test(skillMd) ? ok(code) : fail(`style ${code} missing from SKILL.md`);
   }
 
+  console.log("Keypoint budget table covers every style (content-distillation.md):");
+  const distill = read(path.join(skillDir, "references", "content-distillation.md"));
+  for (const code of codes) {
+    // Table rows may carry a suffix, e.g. "| WEC (cover) |"
+    new RegExp(`^\\| ${code}\\b`, "m").test(distill) ? ok(code) : fail(`style ${code} missing from keypoint budget table`);
+  }
+
   console.log("Machine-readable style specs (styles/{CODE}.yaml):");
   const requiredYamlFields = ["code:", "name:", "template:", "use_for:", "palette:", "typography:", "composition:", "text_density:", "line_quality:", "failure_modes:"];
   for (const code of codes) {

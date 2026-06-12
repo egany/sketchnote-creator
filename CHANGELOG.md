@@ -1,5 +1,18 @@
 ﻿# Changelog
 
+## 0.6.0 - 2026-06-13
+
+Usability release driven by a 4-persona first-time-user review (Codex founder, non-technical Vietnamese marketer, OSS contributor, non-Codex agent user).
+
+- Fixed: shell scripts had UTF-8 BOM + CRLF (broken on Linux/macOS); added `.gitattributes` enforcing LF for `.sh`/`.mjs`/`.yaml`/`.json`.
+- README overhaul: How It Works, style decision list, install paths for Codex + Claude Code + other agents, verify step, Support section.
+- Added `docs/troubleshooting.md`: Vietnamese accent recovery, clutter/style/cover fixes, prompt-only fallback, signature opt-out.
+- `docs/installation.md` rewritten multi-platform; clarified `agents/openai.yaml` is Codex-only metadata.
+- `docs/usage.md`: Vietnamese blog-cover quick start + accent warning up top.
+- Example coverage now 7/7 styles: added ACD, SBS, SB, VTK prompt pairs and a Vietnamese blog-cover input+prompt pair.
+- Eval harness: new check that the keypoint budget table covers every style.
+- Gallery seeded: `evals/gallery/v0.6.0/prompts-to-generate.md` — 7 standard paste-ready prompts (incl. Vietnamese-text scenarios) for manual generation in ChatGPT.
+
 ## 0.5.0 - 2026-06-13
 
 - Added machine-readable style specs `skill/sketchnote-creator/styles/{CODE}.yaml` for all 7 styles: exact palette hex, typography, composition, text-density limits, line quality, failure modes. SKILL.md now instructs reading the YAML before writing the final prompt — no more improvised colors.

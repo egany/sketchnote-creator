@@ -13,7 +13,7 @@ A new style ships only when ALL of these exist:
 
 Checklist of files to touch:
 
-- `skill/sketchnote-creator/SKILL.md`
+- `skill/sketchnote-creator/SKILL.md` — add a row to the **style-selection table** (most-forgotten step)
 - `skill/sketchnote-creator/styles/{CODE}.yaml`
 - `skill/sketchnote-creator/references/style-library.md`
 - `skill/sketchnote-creator/references/content-distillation.md`

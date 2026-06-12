@@ -1,5 +1,17 @@
 ﻿# Usage
 
+## Quick Start: Vietnamese Blog Cover
+
+Copy this and replace the title/subtitle:
+
+```text
+Use sketchnote-creator to create a minimal cover for my blog post.
+Title: 7 điểm chính từ buổi Cafe Talk Online
+Subtitle: Ngày 28/05/2026
+```
+
+**Important — Vietnamese accents:** type your title/subtitle with exact accents (á, ă, â, ê, ô, ơ, ư, đ...). The skill verifies the rendered text and regenerates if wrong, but correct accents in your request give the best result. If accents still come out wrong, see `troubleshooting.md`.
+
 ## Generate an Image
 
 ```text

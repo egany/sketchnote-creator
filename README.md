@@ -1,28 +1,35 @@
-﻿# Sketchnote Creator
+# Sketchnote Creator
 
-Sketchnote Creator is an agent skill for turning notes, articles, frameworks, workflows, and business ideas into clear sketchnote-style image prompts or generated illustrations.
+Sketchnote Creator is an agent skill that turns notes, articles, frameworks, workflows, and business ideas into clear sketchnote-style illustrations and minimal article covers — as generated images or copy-ready prompts.
 
 It is designed for:
 
-- Visual summaries of long-form content
+- Visual summaries of long-form content (blog, slides, social posts)
+- Minimal article covers: title + subtitle + abstract motifs
 - Workshop and presentation graphics
 - Business frameworks and strategy maps
-- AI / automation / leadership educational visuals
-- Vietnamese and English sketchnote outputs
+- Vietnamese and English outputs (with strict diacritics handling)
 
-## What is included
+## How It Works
 
-```text
-skill/sketchnote-creator/
-├── SKILL.md
-├── agents/openai.yaml
-├── assets/
-└── references/
-```
+You paste content and ask. The skill then:
 
-The installable skill lives in `skill/sketchnote-creator`.
+1. **Distills** long content into one core message and 3-7 exact, short labels (no invented facts)
+2. **Picks a style** from the 7 styles below (or uses the one you name)
+3. **Generates** the image from the style's machine-readable spec (exact palette, layout, negative list)
+4. **Verifies** the rendered text — including Vietnamese accents — and regenerates with corrections if wrong
 
-## Styles
+You can also ask for the prompt only and paste it into any image tool yourself.
+
+## Which Style Do I Need?
+
+- **Blog/article cover (title + subtitle only)?** → `WEC`
+- **Before/after, manual vs AI hook?** → `ACD`
+- **One quote or single insight?** → `SBS`
+- **List of lessons or tips?** → `SB`
+- **Step-by-step workflow / SOP?** → `FBW`
+- **Business framework / system map?** → `BLD`
+- **Deep-dive knowledge map?** → `VTK`
 
 | Code | Style | Best for |
 | --- | --- | --- |
@@ -34,34 +41,70 @@ The installable skill lives in `skill/sketchnote-creator`.
 | BLD | Business Line Diagram | Frameworks, systems, architecture maps |
 | VTK | Visual Thinking Knowledge | Deep analysis and knowledge maps |
 
+You don't have to choose — the skill picks the best fit automatically.
+
 ## Install
 
-Copy the installable folder into your Codex skills directory:
+The installable skill lives in `skill/sketchnote-creator` and follows the standard agent-skill format (`SKILL.md` with YAML frontmatter), so it works on any runtime that supports that format.
+
+**Codex** (Windows PowerShell — `$HOME` expands to `C:\Users\<you>`):
 
 ```powershell
 Copy-Item -Recurse .\skill\sketchnote-creator $HOME\.agents\skills\sketchnote-creator
 ```
 
-Restart Codex after installing.
+**Claude Code:**
+
+```powershell
+Copy-Item -Recurse .\skill\sketchnote-creator $HOME\.claude\skills\sketchnote-creator
+```
+
+**Other agents (Gemini CLI, etc.):** copy `skill/sketchnote-creator` into your runtime's skills directory.
+
+Restart your agent after installing. To verify, ask it: `Use sketchnote-creator to create a sketchnote for: "Tools amplify the workflow you already have."`
+
+Image backends: GPT Image 2 first, Gemini Nano Banana 2 as fallback; if your agent cannot generate images at all, the skill returns a copy-ready prompt instead. See `docs/installation.md` for details.
 
 ## Quick Use
 
-Example request:
+Generate an image:
 
 ```text
 Use sketchnote-creator to create an illustration for this business framework: ...
 ```
 
-If you only want a prompt instead of generating an image:
+Vietnamese blog cover (copy, replace title/subtitle):
+
+```text
+Use sketchnote-creator to create a minimal cover for my blog post.
+Title: 7 điểm chính từ buổi Cafe Talk Online
+Subtitle: Ngày 28/05/2026
+```
+
+Prompt only (paste into ChatGPT or any image tool yourself):
 
 ```text
 Use sketchnote-creator and return only the image prompt for this article: ...
 ```
 
+A full set for one article (cover + one illustration per section):
+
+```text
+Use sketchnote-creator to create a cover plus one illustration per section for this article: ...
+```
+
+More patterns: `docs/usage.md`. Sample inputs: `examples/input/`. Sample prompts: `examples/prompts/`.
+
+## Support
+
+- Something looks wrong (Vietnamese accents, layout, style)? → `docs/troubleshooting.md`
+- Questions or bugs → open a GitHub issue
+- Want to add a style? → `docs/authoring-new-styles.md` and `CONTRIBUTING.md`
+
 ## Repository Status
 
-This project is an early public scaffold. Review asset licensing before publishing images or accepting outside contributions.
+Active development. Each release is gated by structural checks and an eval rubric — see `docs/release-process.md` and `CHANGELOG.md`.
 
 ## License
 
-Code and documentation are MIT licensed. Template assets are covered by `ASSET_LICENSE.md` until replaced with fully verified public assets.
+Code and documentation are MIT licensed. Template assets are AI-generated and covered by `ASSET_LICENSE.md`.
