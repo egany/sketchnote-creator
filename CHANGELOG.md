@@ -1,5 +1,12 @@
 ﻿# Changelog
 
+## 0.3.0 - 2026-06-13
+
+- Added series mode: one article → 1 cover + per-section illustrations as a consistent 16:9 set reused across blog, slides, and social (`references/series-mode.md`).
+- Series consistency rules: one body style, locked palette, verbatim style paragraph, recurring motif, 8-image cap with merge notes, JSON manifest output.
+- Added model adapters: prompt adjustments for GPT Image 2 vs Nano Banana 2, one-backend-per-series rule (`references/model-adapters.md`).
+- Added series-mode eval cases and rubric row; series plan + manifest example.
+
 ## 0.2.0 - 2026-06-13
 
 - Added content distillation step: long content is reduced to a core message, ranked keypoints, and exact in-image labels before prompting (`references/content-distillation.md`).

@@ -20,6 +20,14 @@ Use sketchnote-creator to create a minimal cover for this article. Title: ... Su
 
 Covers follow `references/cover-spec.md`: only title + subtitle + abstract motifs, with a small `#voquoccuong` signature at the bottom corner (say "no signature" to omit it).
 
+## Create a Series
+
+```text
+Use sketchnote-creator to create a cover plus one illustration per section for this article: ...
+```
+
+Series mode distills each section, shows you an image plan first, then generates a consistent 16:9 set (one style, one palette) with a JSON manifest. The same set works for blog, slides, and social. See `references/series-mode.md`.
+
 ## Long Content
 
 Long articles are automatically distilled into a core message and 3-7 keypoints before image generation. The keypoints used are listed with the result so you can verify accuracy.

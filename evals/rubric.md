@@ -8,6 +8,7 @@ Use this rubric to review generated prompts or images.
 | Distillation | Long content is reduced to a core message and keypoints within the style budget; labels trace to the source. |
 | Cover compliance | Covers contain only title, subtitle, optional meta, and signature; abstract motifs only; negative list included. |
 | Signature | `#voquoccuong` appears small and faded at a bottom corner unless the user opts out. |
+| Series consistency | Sets use one body style, identical palette and style paragraph across prompts, uniform 16:9, capped at 8 images, manifest returned. |
 | Prompt completeness | Prompt includes style, metaphor, layout, exact text, color rules, and avoid list. |
 | Readability | Text is short enough for image generation and mobile viewing. |
 | Source fidelity | The prompt does not invent facts, prices, names, or claims. |

@@ -25,11 +25,17 @@ When returning the image, list the keypoints/labels used so the user can verify 
 
 Do not ask the user to choose a style unless the request is truly unclear.
 
+## Series Mode
+
+When the user asks for a set of images (series, carousel, "bộ ảnh", one illustration per section/slide), follow `references/series-mode.md`: distill per section, build an image plan, lock one style and palette for the whole set, generate at 16:9, and return a manifest. One 16:9 set serves blog, slides, and social.
+
 ## Image Backend
 
 - Primary: GPT Image 2 (`gpt-image-2` / `gpt-5.5`, native in Codex).
 - Fallback: Gemini Nano Banana 2.
 - If the host agent cannot generate images, return prompt-only output instead of failing.
+
+Adapt the final prompt to the active backend per `references/model-adapters.md`. Use one backend per series.
 
 ## Signature
 
@@ -108,5 +114,6 @@ Use `references/prompt-patterns.md` for reusable prompt structures.
 | ask for prompt | Return style choice and copy-ready prompt |
 | content only | Treat as create image request |
 | revise | Keep previous style unless the user requests a new style |
+| series / carousel / per-section set | Series mode: plan first, then generate the set |
 
 For Vietnamese visuals, follow `references/vietnamese-text-guidelines.md`.
