@@ -1,5 +1,12 @@
 ﻿# Changelog
 
+## 0.4.0 - 2026-06-13
+
+- Added runnable eval harness `scripts/run-evals.mjs` (zero-dependency Node): structural checks (case schema, BOM, template assets, reference links, style-code consistency), grading-packet generation for behavioral cases, and results scoring.
+- Added `evals/results/` with results template; generated grading packet is gitignored.
+- Added `evals/gallery/` for per-version visual regression comparison with standard scenarios.
+- Release gate formalized in `docs/release-process.md`: structural checks + skill validation + behavioral grading + gallery comparison; eval score recorded in CHANGELOG; score regressions must be explained or blocked.
+
 ## 0.3.0 - 2026-06-13
 
 - Added series mode: one article → 1 cover + per-section illustrations as a consistent 16:9 set reused across blog, slides, and social (`references/series-mode.md`).
