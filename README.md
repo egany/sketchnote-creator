@@ -14,8 +14,8 @@ It is designed for:
 
 You paste content and ask. The skill then:
 
-1. **Distills** long content into one core message and 3-7 exact, short labels (no invented facts)
-2. **Picks a style** from the 7 styles below (or uses the one you name)
+1. **Distills** long content into one core message and style-fit exact labels (no invented facts)
+2. **Picks a style** from the 8 styles below (or uses the one you name)
 3. **Generates** the image from the style's machine-readable spec (exact palette, layout, negative list)
 4. **Verifies** the rendered text — including Vietnamese accents — and regenerates with corrections if wrong
 
@@ -28,6 +28,7 @@ You can also ask for the prompt only and paste it into any image tool yourself.
 - **One quote or single insight?** → `SBS`
 - **List of lessons or tips?** → `SB`
 - **Step-by-step workflow / SOP?** → `FBW`
+- **Educational cheat sheet / many concept cards?** → `EIS`
 - **Business framework / system map?** → `BLD`
 - **Deep-dive knowledge map?** → `VTK`
 
@@ -38,6 +39,7 @@ You can also ask for the prompt only and paste it into any image tool yourself.
 | SBS | Sketchnote Blue Story | One insight, quote, reflective lesson |
 | SB | Sketchnote Blue | Multiple lessons, recap, idea list |
 | FBW | FlowBot Watercolor | Workflows, SOPs, automation flows |
+| EIS | Educational Infographic Sketchnote | Cheat sheets, concept explainers, educational posters |
 | BLD | Business Line Diagram | Frameworks, systems, architecture maps |
 | VTK | Visual Thinking Knowledge | Deep analysis and knowledge maps |
 

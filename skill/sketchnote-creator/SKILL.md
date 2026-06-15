@@ -19,7 +19,7 @@ Turn user content into clear sketchnote-style visuals for slides, workshops, soc
 7. Generate the image, or return only a prompt if the user asks for prompt-only output.
 8. Verify text: read the generated image back and compare every word, including Vietnamese accents, against the distilled labels. If text is wrong, regenerate with corrections up to 2 times, then report any remaining issue honestly.
 
-Defaults: 16:9 ratio, same language as input, short readable text, mobile-friendly labels.
+Defaults: 16:9 ratio, same language as input, short readable text, mobile-friendly labels. For EIS poster or cheat-sheet requests, use vertical 2:3 by default unless the user asks for slide/social 16:9.
 
 When returning the image, list the keypoints/labels used so the user can verify accuracy.
 
@@ -57,10 +57,11 @@ Unless the user opts out or provides their own brand mark, add `#voquoccuong` at
 | one insight, quote, emotional story | SBS |
 | multiple lessons, recap, idea list | SB |
 | step-by-step, workflow, SOP, automation flow | FBW |
+| educational infographic, cheat sheet, terminology explainer, 6-9 concept cards | EIS |
 | framework, system, architecture, strategy map | BLD |
 | deep explanation, visual essay, knowledge map | VTK |
 
-If content fits multiple styles, choose the one that makes the core message easiest to understand in 3 seconds.
+If content fits multiple styles, choose the one that makes the core message easiest to understand in 3 seconds. Prefer EIS over BLD or VTK when the request asks for a poster, cheat sheet, or many short concept cards in a grid.
 
 For detailed style rules, read `references/style-library.md`. When building the final prompt, read `styles/{CODE}.yaml` for the exact palette hex values, typography, composition, text-density limit, and failure modes of the selected style — use those values verbatim instead of improvising colors.
 
@@ -74,7 +75,7 @@ Before writing the final prompt, determine:
 - Strongest USP: the most specific valuable point.
 - Main visual metaphor: one dominant metaphor.
 - Layout: headline, main visual, labels, CTA, hierarchy.
-- Text density: low, medium, or high. Prefer low/medium.
+- Text density: low, medium, or high. Prefer low/medium unless the selected style is EIS or VTK and the text is chunked.
 - Visual density: low, medium, or high. Avoid clutter.
 - CTA logic: natural ending of the visual story.
 

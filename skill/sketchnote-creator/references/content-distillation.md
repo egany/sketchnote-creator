@@ -13,7 +13,7 @@ Turn long or messy source content into a small set of exact, image-ready text el
 Produce silently, in this order:
 
 1. **Core message** — one sentence the viewer must understand in 3 seconds.
-2. **Ranked keypoints** — 3-7 items, most important first.
+2. **Ranked keypoints** — style-fit items, most important first.
 3. **Exact in-image labels** — the final text exactly as it will appear in the image. Apply `vietnamese-text-guidelines.md` for Vietnamese (2-5 words per label, correct accents).
 4. **Dropped-content note** — what was deliberately left out, so a revision can bring it back.
 
@@ -26,6 +26,7 @@ Produce silently, in this order:
 | SBS | 1 insight only |
 | SB | 3-6 bullets |
 | FBW | 3-6 steps |
+| EIS | 6-9 concept cards, each with title + 1-3 short lines |
 | BLD | 3-7 blocks |
 | VTK | 3-7 branches |
 

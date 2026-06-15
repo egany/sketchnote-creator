@@ -13,5 +13,10 @@
     "name": "before_after_should_use_acd",
     "input": "Show before and after AI automation for a manual workflow.",
     "expected_style": "ACD"
+  },
+  {
+    "name": "educational_cheat_sheet_should_use_eis",
+    "input": "Create a Vietnamese cheat sheet explaining 9 Domain-Driven Design concepts as concept cards.",
+    "expected_style": "EIS"
   }
 ]

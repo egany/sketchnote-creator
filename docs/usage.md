@@ -42,7 +42,7 @@ Series mode distills each section, shows you an image plan first, then generates
 
 ## Long Content
 
-Long articles are automatically distilled into a core message and 3-7 keypoints before image generation. The keypoints used are listed with the result so you can verify accuracy.
+Long articles are automatically distilled into a core message and style-fit keypoints before image generation. Most styles use 3-7 labels; EIS can use 6-9 short concept cards. The keypoints used are listed with the result so you can verify accuracy.
 
 ## Revise an Image
 
@@ -57,5 +57,6 @@ Good inputs include:
 - A headline and short article
 - A list of steps
 - A business framework
+- A cheat sheet or educational concept explainer
 - A before/after description
 - A community or product overview

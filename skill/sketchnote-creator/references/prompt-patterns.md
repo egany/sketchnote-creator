@@ -2,7 +2,7 @@
 
 ## Business Framework Diagram
 
-Use BLD or VTK.
+Use BLD, EIS, or VTK. Pick EIS when the user asks for a cheat sheet, poster, or many concept cards instead of a connector diagram or knowledge map.
 
 Required prompt fields:
 
@@ -13,6 +13,20 @@ Required prompt fields:
 - One dominant metaphor
 - Exact labels
 - Avoid clutter and long paragraphs
+
+## Educational Infographic / Cheat Sheet
+
+Use EIS.
+
+Required prompt fields:
+
+- Topic title
+- Short explanatory subtitle or highlight bar
+- Optional pain point, key question, or "why it matters" corner box
+- 6-9 concept cards, each with number, title, icon, and 1-3 short lines
+- Bottom benefit, process flow, key takeaway, or mini summary
+- Exact Vietnamese or English labels
+- Avoid tiny text, long paragraphs, photorealism, complex perspective, and decorative icon overload
 
 ## Workflow / SOP
 

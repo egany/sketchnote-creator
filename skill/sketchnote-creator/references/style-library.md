@@ -1,6 +1,6 @@
 ﻿# Style Library
 
-Human overview of the seven styles. Machine-readable specs with exact palette hex, typography, composition, density limits, and failure modes live in `styles/{CODE}.yaml` — read the YAML of the selected style before writing the final prompt.
+Human overview of the eight styles. Machine-readable specs with exact palette hex, typography, composition, density limits, and failure modes live in `styles/{CODE}.yaml` — read the YAML of the selected style before writing the final prompt.
 
 ## ACD - AI Contrast Drama
 
@@ -43,6 +43,14 @@ Template: `assets/FBW-FlowBot-Watercolor-template.jpg`
 Use for workflow, SOP, step-by-step process, automation flow, tutorial.
 
 Style: friendly AI guide, soft watercolor, educational. Horizontal left-to-right workflow with arrows. Blue/cream with orange/yellow accents.
+
+## EIS - Educational Infographic Sketchnote
+
+Template: `assets/EIS-Educational-Infographic-Sketchnote-template.png`
+
+Use for educational explainers, cheat sheets, technical/business terminology guides, knowledge posters, framework overviews with many concepts, and multi-concept comparisons.
+
+Style: hand-drawn educational infographic poster on warm white paper. Large handwritten title, subtitle highlight bar, optional problem/key-question corner box, 6-9 rounded concept cards in a clear grid, small meaningful icons, pastel blue/green/yellow/orange/purple fills, and a bottom takeaway or process strip.
 
 ## BLD - Business Line Diagram
 

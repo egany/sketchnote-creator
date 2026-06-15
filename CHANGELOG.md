@@ -1,5 +1,11 @@
 ﻿# Changelog
 
+## 0.7.0 - 2026-06-16
+
+- Added EIS - Educational Infographic Sketchnote for cheat sheets, educational concept explainers, technical/business terminology guides, and 6-9 card knowledge posters.
+- Added EIS machine-readable style spec, template asset requirement, style routing, content-distillation budget, prompt pattern, example input/prompt, and style-selection eval case.
+- Updated docs to describe eight style families and clarify when EIS should beat BLD or VTK.
+
 ## 0.6.0 - 2026-06-13
 
 Usability release driven by a 4-persona first-time-user review (Codex founder, non-technical Vietnamese marketer, OSS contributor, non-Codex agent user).
